@@ -3,7 +3,6 @@
 #       and made functional as originally intended
 from Tkinter import *
 from phones import *
-import pickle
 
 
 # Set selection target
@@ -34,8 +33,8 @@ def loadEntry():
 
 # Save Changes to File for next form load
 def saveEntry():
+    saveListPickle(phonelist)
     print ''
-    #pickle.dump(phonelist, 'phones.py')
     
 # Create GUI Window
 def makeWindow():
@@ -91,7 +90,7 @@ def setSelect():
     for name, phone in phonelist:
         select.insert(END, name)
 
-
+phonelist = loadListPickle()
 win = makeWindow()
 setSelect()
 win.mainloop()
