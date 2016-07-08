@@ -1,3 +1,4 @@
+'''
 from Tkinter import *
 
 win = Tk()
@@ -10,3 +11,4 @@ b2.pack(side = LEFT, padx = 10)
 
 
 win.mainloop()
+'''
